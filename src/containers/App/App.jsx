@@ -1,9 +1,7 @@
-import cn from "classnames";
-import styles from "./App.module.css";
-import { getApiResource } from "../../utils/network";
+import PeoplePage from "../peoplePage/peoplePage";
 
 const App = () => {
-  return <h1 className={cn(styles.header, styles.text)}>Hello</h1>;
+  return <PeoplePage />;
 };
 
 export default App;

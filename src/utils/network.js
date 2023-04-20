@@ -24,7 +24,7 @@ export const getApiResource = async (url) => {
 // const body = getApiResource(SWAPI_ROOT + SWAPI_PEOPLE);
 // console.log(body);
 
-(async () => {
-  const body = await getApiResource(SWAPI_ROOT + SWAPI_PEOPLE);
-  console.log(body);
-})();
+// (async () => {
+//   const body = await getApiResource(SWAPI_ROOT + SWAPI_PEOPLE);
+//   console.log(body);
+// })();
