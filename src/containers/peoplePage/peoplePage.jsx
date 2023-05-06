@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { getApiResource } from "../../utils/network";
 import { API_PEOPLE } from "../../constants/api";
 import { getPeopleId, getPeopleImage } from "../../services/getPeopleData";
-import PeopleList from "./peopleList/peopleList";
-import styles from "./peoplePage.module.css";
+import PeopleList from "../../components/peoplePage/peopleList/peopleList";
 
 const PeoplePage = () => {
   const [people, setPeople] = useState(null);
@@ -29,6 +28,7 @@ const PeoplePage = () => {
   useEffect(() => {
     getResource(API_PEOPLE);
   }, []);
+  // if (people !== null)
   return <>{people && <PeopleList people={people} />}</>;
 };
 

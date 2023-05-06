@@ -1,4 +1,4 @@
-import PeoplePage from "../../components/peoplePage/peoplePage";
+import PeoplePage from "../peoplePage/peoplePage";
 
 const App = () => {
   return <PeoplePage />;
