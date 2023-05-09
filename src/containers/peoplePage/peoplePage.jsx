@@ -42,7 +42,7 @@ const PeoplePage = ({ setErrorApi }) => {
   // if (people !== null)
   return (
     <>
-      <h1>Navigation</h1>
+      <h1 className="header__text">Navigation</h1>
       {people && <PeopleList people={people} />}
     </>
   );
