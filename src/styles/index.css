@@ -9,6 +9,10 @@
   --font-size-header: 26px;
 
   --border-radius-small: 3px;
+
+  --theme-default-header: #cccc46;
+
+  --transition: 0.4s;
 }
 
 body {
@@ -16,4 +20,12 @@ body {
   padding: 0;
   background-color: var(--color-dark-gray);
   font-family: var(--font-family-main);
+}
+
+.header__text {
+  line-height: 1.7;
+  font-size: var(--font-size-header);
+  text-shadow: 0 0 2px var(--color-black);
+  color: var(--theme-default-header);
+  transition: color var(--transition);
 }
