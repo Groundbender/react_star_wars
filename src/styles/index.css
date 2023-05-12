@@ -7,8 +7,11 @@
   --color-violet: #ae72ca;
 
   --spacing-small: 10px;
+  --spacing-ultrasmall: 5px;
   --spacing-medium: 20px;
   --spacing-large: 30px;
+
+  --margin-list: 7px;
 
   --font-family-main: sans-serif;
 
@@ -20,6 +23,7 @@
   --font-bold: 600;
 
   --border-radius-small: 3px;
+  --border-radius-medium: 5px;
 
   --theme-default-header: #cccc46;
   --theme-default-bgimage: url(@static/bg.jpg);
