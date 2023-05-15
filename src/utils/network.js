@@ -40,3 +40,14 @@ export const getApiResource = async (url) => {
 //   const body = await getApiResource(SWAPI_ROOT + SWAPI_PEOPLE);
 //   console.log(body);
 // })();
+
+// запрашиваем фильмы из всех ссылок в массиве фильмов
+export const makeConcurrentRequest = async (urlArrFilms) => {
+  const res = await Promise.all(
+    urlArrFilms.map((res) => {
+      return fetch(res).then((res) => res.json());
+    })
+  );
+
+  return res;
+};
