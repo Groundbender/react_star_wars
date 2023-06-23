@@ -21,6 +21,7 @@ const PersonFilms = React.lazy(() =>
 
 const PersonPage = ({ match, setErrorApi }) => {
   const { id } = useParams();
+  const [personId, setPersonId] = useState(null);
   const [personInfo, setPersonInfo] = useState(null);
   const [personName, setPersonName] = useState(null);
   const [personPhoto, setPersonPhoto] = useState(null);
@@ -29,8 +30,7 @@ const PersonPage = ({ match, setErrorApi }) => {
   useEffect(() => {
     (async () => {
       const res = await getApiResource(`${API_PERSON}/${id}/`);
-
-      console.log(res);
+      setPersonId(id);
 
       if (res) {
         setPersonInfo([
@@ -83,7 +83,11 @@ const PersonPage = ({ match, setErrorApi }) => {
         <span className={styles.person__name}>{personName}</span>
 
         <div className={styles.container}>
-          <PersonPhoto personName={personName} personPhoto={personPhoto} />
+          <PersonPhoto
+            personId={personId}
+            personName={personName}
+            personPhoto={personPhoto}
+          />
 
           {personInfo && <PersonInfo personInfo={personInfo} />}
 
