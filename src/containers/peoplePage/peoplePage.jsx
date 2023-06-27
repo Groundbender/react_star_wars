@@ -73,7 +73,7 @@ const PeoplePage = ({ setErrorApi }) => {
           <UILoading className={styles.character__loader} />
         </div>
       )}
-      {people && <PeopleList people={people} />}
+      {people && !loading && <PeopleList people={people} />}
     </>
   );
 };
