@@ -3,8 +3,9 @@ import {
   ADD_PERSON_TO_FAVORITE,
   REMOVE_PERSON_FROM_FAVORITE,
 } from "@store/constants/actionTypes.js";
+import { getFromLocalStorage } from "@utils/localStorage";
 
-const initialState = {};
+const initialState = getFromLocalStorage("store") || {};
 export const favoriteReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ADD_PERSON_TO_FAVORITE:
