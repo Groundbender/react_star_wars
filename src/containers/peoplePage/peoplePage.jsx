@@ -34,6 +34,7 @@ const PeoplePage = ({ setErrorApi }) => {
     if (res) {
       const peopleList = res.results.map(({ name, url }) => {
         const id = getPeopleId(url);
+
         const img = getPeopleImage(id);
 
         return {
@@ -47,6 +48,7 @@ const PeoplePage = ({ setErrorApi }) => {
       setPrevPage(changeHTTP(res.previous));
       setNextPage(changeHTTP(res.next));
       setCounterPage(getPeoplePageId(url));
+
       setErrorApi(false);
     } else {
       setLoading(false);
