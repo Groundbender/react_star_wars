@@ -9,11 +9,6 @@ export default {
 // export const Primary = Template.bind({})
 
 const props = {
-  // text: "Hello",
-  // onClick: () => console.log("Hello storybook"),
-  // disabled: true,
-  // theme: "dark",
-  // classes: "",
   theme: "black",
   isShadow: false,
   classes: "",
