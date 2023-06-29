@@ -13,8 +13,10 @@ import styles from "./SearchPage.module.css";
 const SearchPage = ({ setErrorApi }) => {
   const [inputSearchValue, setInputSearchValue] = useState("");
   const [people, setPeople] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const getResponse = async (param) => {
+    setLoading(true);
     const res = await getApiResource(API_SEARCH + param);
 
     if (res) {
@@ -29,7 +31,10 @@ const SearchPage = ({ setErrorApi }) => {
       });
       setPeople(peopleList);
       setErrorApi(false);
+      setLoading(false);
     } else {
+      setLoading(false);
+
       setErrorApi(true);
     }
   };
@@ -57,7 +62,8 @@ const SearchPage = ({ setErrorApi }) => {
         placeholder="Search character..."
         classes={styles.input__search}
       />
-      <SearchPageInfo people={people} />
+
+      <SearchPageInfo loading={loading} people={people} />
     </>
   );
 };

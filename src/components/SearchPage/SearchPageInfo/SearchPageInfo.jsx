@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./SearchPageInfo.module.css";
-const SearchPageInfo = ({ people }) => {
+import UILoading from "@UI/UILoading/UILoading";
+const SearchPageInfo = ({ people, loading }) => {
   return (
     <>
       {people.length ? (
@@ -15,6 +16,10 @@ const SearchPageInfo = ({ people }) => {
             </li>
           ))}
         </ul>
+      ) : loading ? (
+        <div className={styles.loading__container}>
+          <UILoading />
+        </div>
       ) : (
         <h2 className={styles.person__comment}>No results</h2>
       )}
