@@ -50,6 +50,9 @@ const Header = () => {
           <NavLink to="/search">Search</NavLink>
         </li>
         <li>
+          <NavLink to="/fail">Fail</NavLink>
+        </li>
+        <li>
           <NavLink to="/not-found">Not Found</NavLink>
         </li>
       </ul>
